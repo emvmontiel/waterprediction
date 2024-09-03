@@ -2,7 +2,7 @@
 
 Welcome to the Dashboard repository!
 
-This Dashboard is a sleek and modern dashboard design created using HTML, CSS, and JavaScript. This repository contains the source code for the AdminHub Dashboard.
+This Dashboard is a sleek and modern dashboard design created using HTML, CSS, and JavaScript. This repository contains the source code for the Dashboard.
 
 ## Features
 
@@ -17,4 +17,5 @@ To get started with the Dashboard, follow these steps:
 
 1. Clone this repository: `git clone https://github.com/emvmontiel/waterprediction.git`
 2. Open the `index.html` file in your web browser to view the dashboard.
+3. Alternatively, you can use Live Server in Visual Studio Code.
 
