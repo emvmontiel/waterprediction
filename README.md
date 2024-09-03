@@ -15,6 +15,6 @@ This Dashboard is a sleek and modern dashboard design created using HTML, CSS, a
 
 To get started with the Dashboard, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/fajarnurwahid/adminhub.git`
+1. Clone this repository: `git clone https://github.com/emvmontiel/waterprediction.git`
 2. Open the `index.html` file in your web browser to view the dashboard.
 
