@@ -589,4 +589,8 @@ body {
 	#content main .table-data .todo .todo-list {
 		min-width: 420px;
 	}
+	.form-group {
+		margin-bottom: 5px;
+		text-align:center;
+	}
 }

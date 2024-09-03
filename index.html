@@ -110,60 +110,75 @@
 				</div>
 			</div>
 
-			
-
-
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Davao City Water Consumption</h3>
-						<input type="date" id="birthday" name="birthday">
+						<label for="algo">Choose a model:</label>
+						<select name="algo" id="algo">
+							<option value="sarimax">sarimax</option>
+							<option value="prophet">prophet</option>
+							<option value="xgboost">xgboost</option>
+							<option value="lstm">lstm</option>
+							<option value="ensemble">ensemble</option>
+						  </select>
+						  <label for="date">Date:</label>
+						<input type="date" id="date" name="date">
 						<i class='bx bx-filter' ></i>
 					</div>
 					<table>
 						<thead>
 							<tr>
-								<th>Cubic Meters</th>
-								<th>Date</th>
-								<th>Population</th>
+								<th>Category</th>
+								<th>Stats</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>
-									<p>105,632</p>
-								</td>
-								<td>01-10-2021</td>
-								<td>5,247,116</td>
+								<td>Rainfall:</td>
+								<td><div class="form-group">
+									<input type="number" id="rainfall" value="4284">
+								</div></td>
 							</tr>
 							<tr>
-								<td>
-									<p>122,625</p>
-								</td>
-								<td>01-10-2021</td>
-								<td>5,677,935</td>
+								<td>TMIN:</td>
+								<td><div class="form-group">
+									<input type="number" id="tmin" value="2384">
+								</div></td>
 							</tr>
 							<tr>
-								<td>
-									<p>104,603</p>
-								</td>
-								<td>01-10-2021</td>
-								<td>5,679,231</td>
+								<td>TMAX:</td>
+								<td><div class="form-group">
+									<input type="number" id="tmax" value="23482">
+								</div></td>
 							</tr>
 							<tr>
-								<td>
-									<p>103,987</p>
-								</td>
-								<td>01-10-2021</td>
-								<td>5,701,033</td>
+								<td>RH:</td>
+								<td><div class="form-group">
+									<input type="number" id="rh" value="2384">
+								</div></td>
 							</tr>
 							<tr>
-								<td>
-									<p>106,802</p>
-								</td>
-								<td>01-10-2021</td>
-								<td>5,751,102</td>
+								<td>Wind Speed:</td>
+								<td><div class="form-group">
+									<input type="number" id="wind_speed" value="8342">
+								</div></td>
 							</tr>
+							<tr>
+								<td>Wind Direction:</td>
+								<td><div class="form-group">
+									<input type="number" id="wind_direction" value="8234">
+								</div></td>
+							</tr>
+							<tr>
+								<td>Estimated Population:</td>
+								<td><div class="form-group">
+									<input type="number" id="population" value="823423">
+								</div></td>
+							</tr>
+							<th><h3><div class="result" id="prediction-result">
+								Predicted Water Consumption: 5980161
+							</div></h3>
+							</th>
 						</tbody>
 					</table>
 				</div>
