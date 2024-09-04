@@ -14,11 +14,9 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="manifest" href="img/favicon/site.webmanifest">
 
-
 	<title>Davao City Water Consumption</title>
 </head>
 <body>
-
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
@@ -63,17 +61,9 @@
 					<span class="text">Settings</span>
 				</a>
 			</li>
-			<li>
-				<a href="#" class="logout">
-					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Logout</span>
-				</a>
-			</li>
 		</ul>
 	</section>
 	<!-- SIDEBAR -->
-
-
 
 	<!-- CONTENT -->
 	<section id="content">
@@ -83,13 +73,6 @@
 			<form action="#">
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">2</span>
-			</a>
-			<a href="#" class="profile">
-				<img src="img/people.png">
-			</a>
 		</nav>
 		<!-- NAVBAR -->
 
@@ -97,88 +80,111 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="#">Home</a>
-						</li>
-					</ul>
+					<h1>Water Consumption Prediction Dashboard</h1>
 				</div>
 			</div>
 
 			<div class="table-data">
 				<div class="order">
-					<div class="head">
-						<label for="algo">Choose a model:</label>
-						<select name="algo" id="algo">
-							<option value="sarimax">sarimax</option>
-							<option value="prophet">prophet</option>
-							<option value="xgboost">xgboost</option>
-							<option value="lstm">lstm</option>
-							<option value="ensemble">ensemble</option>
-						  </select>
-						  <label for="date">Date:</label>
-						<input type="date" id="date" name="date">
-						<i class='bx bx-filter' ></i>
-					</div>
 					<table>
 						<thead>
 							<tr>
-								<th>Category</th>
-								<th>Stats</th>
+								<th>
+									<label for="algo">
+										<h3>Choose Model</h3>
+									</label>
+								</th>
+								<th>
+									<select name="algo" id="algo">
+										<option value="ensemble">Ensemble</option>
+										<option value="lstm">LSTM</option>
+										<option value="prophet">Prophet</option>
+										<option value="sarimax">SARIMAX</option>
+										<option value="xgboost">XGBoost</option>
+									</select>
+								</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Rainfall:</td>
-								<td><div class="form-group">
-									<input type="number" id="rainfall" value="4284">
-								</div></td>
+								<td>
+									<label for="date">Date</label>
+								</td>
+								<td>
+									<input type="date" id="date" name="date">
+								</td>
 							</tr>
 							<tr>
-								<td>TMIN:</td>
-								<td><div class="form-group">
+								<td>Rainfall</td>
+								<td>
+									<div class="form-group">
+									<input type="number" id="rainfall" value="4284">
+								</div>
+								</td>
+							</tr>
+							<tr>
+								<td>TMAX</td>
+								<td>
+									<div class="form-group">
 									<input type="number" id="tmin" value="2384">
 								</div></td>
 							</tr>
 							<tr>
-								<td>TMAX:</td>
-								<td><div class="form-group">
+								<td>TMIN</td>
+								<td>
+									<div class="form-group">
 									<input type="number" id="tmax" value="23482">
 								</div></td>
 							</tr>
 							<tr>
-								<td>RH:</td>
-								<td><div class="form-group">
+								<td>RH</td>
+								<td>
+									<div class="form-group">
 									<input type="number" id="rh" value="2384">
 								</div></td>
 							</tr>
 							<tr>
-								<td>Wind Speed:</td>
-								<td><div class="form-group">
+								<td>Wind Speed</td>
+								<td>
+									<div class="form-group">
 									<input type="number" id="wind_speed" value="8342">
 								</div></td>
 							</tr>
 							<tr>
-								<td>Wind Direction:</td>
-								<td><div class="form-group">
+								<td>Wind Direction</td>
+								<td>
+									<div class="form-group">
 									<input type="number" id="wind_direction" value="8234">
 								</div></td>
 							</tr>
 							<tr>
-								<td>Estimated Population:</td>
-								<td><div class="form-group">
+								<td>Estimated Population</td>
+								<td>
+									<div class="form-group">
 									<input type="number" id="population" value="823423">
-								</div></td>
+								</div>
+							</td>
 							</tr>
-							<th><h3><div class="result" id="prediction-result">
-								Predicted Water Consumption: 5980161
-							</div></h3>
-							</th>
+							<tr>
+								<td></td>
+								<td>
+									<button class="button" role="button">Predict</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<h3>
+										Predicted Water Consumption
+									</h3>
+								</td>
+								<td>
+									<div id="result"></div>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -212,7 +218,6 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
 
 	<script src="script.js"></script>
 </body>
