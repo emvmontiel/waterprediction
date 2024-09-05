@@ -46,9 +46,6 @@ body {
 }
 
 
-
-
-
 /* SIDEBAR */
 #sidebar {
 	position: fixed;
@@ -144,9 +141,6 @@ body {
 #sidebar.hide .side-menu li a {
 	width: calc(48px - (4px * 2));
 	transition: width .3s ease;
-}
-#sidebar .side-menu li a.logout {
-	color: var(--red);
 }
 #sidebar .side-menu.top li a:hover {
 	color: var(--blue);
@@ -307,7 +301,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	grid-gap: 16px;
-	flex-wrap: wrap;
+	flex-wrap: wrap; 
 }
 #content main .head-title .left h1 {
 	font-size: 36px;
@@ -386,11 +380,6 @@ body {
 #content main .box-info li .text p {
 	color: var(--dark);	
 }
-
-
-
-
-
 #content main .table-data {
 	display: flex;
 	flex-wrap: wrap;
@@ -431,13 +420,15 @@ body {
 	border-style: dashed; */
 }
 #content main .table-data .order table th {
-	padding-bottom: 12px;
+	padding-bottom: 15px;
+	padding-top: 15px;
 	font-size: 13px;
 	text-align: left;
 	border-bottom: 1px solid var(--grey);
 }
 #content main .table-data .order table td {
-	padding: 16px 0;
+	padding-bottom: 15px;
+	padding-top: 15px;
 }
 #content main .table-data .order table tr td:first-child {
 	display: flex;
@@ -451,54 +442,16 @@ body {
 	border-radius: 50%;
 	object-fit: cover;
 }
-#content main .table-data .order table tbody tr:hover {
-	background: var(--grey);
-}
+/* #content main .table-data .order table tbody tr:hover {
+	background: var(--grey);            
+
+} */
 #content main .table-data .order table tr td .status {
 	font-size: 10px;
 	padding: 6px 16px;
 	color: var(--light);
 	border-radius: 20px;
 	font-weight: 700;
-}
-#content main .table-data .order table tr td .status.completed {
-	background: var(--blue);
-}
-#content main .table-data .order table tr td .status.process {
-	background: var(--yellow);
-}
-#content main .table-data .order table tr td .status.pending {
-	background: var(--orange);
-}
-
-#content main .table-data .todo {
-	flex-grow: 1;
-	flex-basis: 300px;
-}
-#content main .table-data .todo .todo-list {
-	width: 100%;
-}
-#content main .table-data .todo .todo-list li {
-	width: 100%;
-	margin-bottom: 16px;
-	background: var(--grey);
-	border-radius: 10px;
-	padding: 14px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-#content main .table-data .todo .todo-list li .bx {
-	cursor: pointer;
-}
-#content main .table-data .todo .todo-list li.completed {
-	border-left: 10px solid var(--blue);
-}
-#content main .table-data .todo .todo-list li.not-completed {
-	border-left: 10px solid var(--orange);
-}
-#content main .table-data .todo .todo-list li:last-child {
-	margin-bottom: 0;
 }
 .button {
 	background: #fff;
@@ -525,19 +478,15 @@ body {
 	-webkit-user-select: none;
 	touch-action: manipulation;
   }
-  
   .button:not(:disabled):hover {
 	transform: scale(1.05);
   }
-  
   .button:not(:disabled):hover:active {
 	transform: scale(1.05) translateY(.125rem);
   }
-  
   .button:focus {
 	outline: 0 solid transparent;
   }
-  
   .button:focus:before {
 	content: "";
 	left: calc(-1*.375rem);
@@ -547,18 +496,56 @@ body {
 	transition: border-radius;
 	user-select: none;
   }
-  
   .button:focus:not(:focus-visible) {
 	outline: 0 solid transparent;
   }
-  
   .button:focus:not(:focus-visible):before {
 	border-width: 0;
   }
-  
   .button:not(:disabled):active {
 	transform: translateY(.125rem);
   }
+  textarea {
+	border-radius: 30px;
+    border: 2px solid #ccc;
+    font-family: var(--light);
+    width: 60%;
+    height: 40px;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, border-width 0.3s;
+  }
+  input[type="date"], select {
+    border-radius: 30px;
+    border: 2px solid #ccc;
+    font-family: var(--light);
+    width: 60%;
+    height: 40px;
+    padding: 10px;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, border-width 0.3s;
+}
+
+textarea {
+    resize: none;
+    height: 37.5px;
+}
+textarea:hover,
+input[type="date"]:hover,
+select:hover {
+    border-color: var(--blue);
+	cursor: pointer;
+}
+
+textarea:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--blue);
+    border-width: 0.125rem;
+}
+
 /* MAIN */
 /* CONTENT */
 
@@ -576,11 +563,6 @@ body {
 		display: none;
 	}
 }
-
-
-
-
-
 
 @media screen and (max-width: 576px) {
 	#content nav form .form-input input {

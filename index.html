@@ -26,25 +26,13 @@
 			<li class="active">
 				<a href="#">
 					<i class='bx bxs-dashboard' ></i>
-					<span class="text">Dashboard</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Weather</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Analytics</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Contact Us</span>
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Error Metrics</span>
 				</a>
 			</li>
 			<li>
@@ -53,8 +41,12 @@
 					<span class="text">Team</span>
 				</a>
 			</li>
-		</ul>
-		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Contact Us</span>
+				</a>
+			</li>
 			<li>
 				<a href="#">
 					<i class='bx bxs-cog' ></i>
@@ -91,7 +83,7 @@
 							<tr>
 								<th>
 									<label for="algo">
-										<h3>Choose Model</h3>
+										<h2>Choose Model</h2>
 									</label>
 								</th>
 								<th>
@@ -104,21 +96,23 @@
 									</select>
 								</th>
 							</tr>
+							<tr>
+								<th>
+									<label for="date">
+										<h2>Date</h2>
+									</label>
+								</th>
+								<th>
+									<input type="date" id="date" name="date">
+								</th>
+							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									<label for="date">Date</label>
-								</td>
-								<td>
-									<input type="date" id="date" name="date">
-								</td>
-							</tr>
 							<tr>
 								<td>Rainfall</td>
 								<td>
 									<div class="form-group">
-									<input type="number" id="rainfall" value="4284">
+									<textarea readonly type="number" id="rainfall" value="4284"></textarea>
 								</div>
 								</td>
 							</tr>
@@ -126,42 +120,42 @@
 								<td>TMAX</td>
 								<td>
 									<div class="form-group">
-									<input type="number" id="tmin" value="2384">
+									<textarea readonly type="number" id="tmin" value="23482"></textarea>
 								</div></td>
 							</tr>
 							<tr>
 								<td>TMIN</td>
 								<td>
 									<div class="form-group">
-									<input type="number" id="tmax" value="23482">
+									<textarea readonly type="number" id="tmax" value="2384"></textarea>
 								</div></td>
 							</tr>
 							<tr>
 								<td>RH</td>
 								<td>
 									<div class="form-group">
-									<input type="number" id="rh" value="2384">
+									<textarea readonly type="number" id="rh" value="2384"></textarea>
 								</div></td>
 							</tr>
 							<tr>
 								<td>Wind Speed</td>
 								<td>
 									<div class="form-group">
-									<input type="number" id="wind_speed" value="8342">
+									<textarea readonly type="number" id="wind_speed" value="8342"></textarea>
 								</div></td>
 							</tr>
 							<tr>
 								<td>Wind Direction</td>
 								<td>
 									<div class="form-group">
-									<input type="number" id="wind_direction" value="8234">
+									<textarea readonly type="number" id="wind_direction" value="8234"></textarea>
 								</div></td>
 							</tr>
 							<tr>
 								<td>Estimated Population</td>
 								<td>
 									<div class="form-group">
-									<input type="number" id="population" value="823423">
+									<textarea readonly type="number" id="population" value="823423"></textarea>
 								</div>
 							</td>
 							</tr>
@@ -187,31 +181,6 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
-				<div class="todo">
-					<div class="head">
-						<h3>Error Metrics</h3>
-						<i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<p>MSE</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>RMSE</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>MAE</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>MAPE</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</main>
