@@ -11,9 +11,7 @@ allSideMenu.forEach(item=> {
 	})
 });
 
-document.getElementById('result').innerText = "";
-
-// TOGGLE SIDEBAR
+// Toggle sidebar
 const menuBar = document.querySelector('#content nav .bx.bx-menu');
 const sidebar = document.getElementById('sidebar');
 
@@ -21,6 +19,7 @@ menuBar.addEventListener('click', function () {
 	sidebar.classList.toggle('hide');
 })
 
+// jQuery for dropdown box
 $(".dropdown-el").click(function (e) {
 	e.preventDefault();
 	e.stopPropagation();
@@ -30,3 +29,6 @@ $(".dropdown-el").click(function (e) {
   $(document).click(function () {
 	$(".dropdown-el").removeClass("expanded");
   });
+
+// Prediction result from backend
+document.getElementById('result').innerText = "";
